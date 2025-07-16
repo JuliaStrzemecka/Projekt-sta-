@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreewayIT.Test", "FreewayIT.Test\FreewayIT.Test.csproj", "{FD7F8345-717A-4D9E-9B65-BAAE0448B728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreewayIT.Test.DAL", "FreewayIT.Test.DAL\FreewayIT.Test.DAL.csproj", "{5FDE7C75-A9A8-43ED-B621-82B067ED81E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD7F8345-717A-4D9E-9B65-BAAE0448B728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7F8345-717A-4D9E-9B65-BAAE0448B728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7F8345-717A-4D9E-9B65-BAAE0448B728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7F8345-717A-4D9E-9B65-BAAE0448B728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDE7C75-A9A8-43ED-B621-82B067ED81E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDE7C75-A9A8-43ED-B621-82B067ED81E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDE7C75-A9A8-43ED-B621-82B067ED81E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDE7C75-A9A8-43ED-B621-82B067ED81E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

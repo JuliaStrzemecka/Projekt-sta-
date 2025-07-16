@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FreewayIT.Test.DAL.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string sortOrder = ViewBag.CurrentSort as string ?? "";
+}
+
+<h2>Employees Index</h2>
+
+
+<table class="table table-sm table-striped">
+    <tr>
+        <th class="col-3" scope="col">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+		<th class="col-3" scope="col">
+			@Html.DisplayNameFor(model => model.LastName)
+		</th>
+
+        <th scope="col" class="col-2">
+            Birth Month
+        </th>
+        <th class="col-3" scope="col">
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th class="col-2"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City.Name)
+        </td>
+		<td>
+				@Html.ActionLink("Edit", "Edit", new { id = item.ID }, new {@class = "text-primary fs-8 text-decoration-none"})
+			@using (Html.BeginForm("Delete", "Employee", new { id = item.ID }, FormMethod.Post, new { @onsubmit = "return confirm('Czy na pewno chcesz usunąć?');", style = "display:inline;" }))
+			{
+				@Html.AntiForgeryToken()
+				<input type="submit" value="Delete" class="btn btn-sm text-danger fs-8" />
+			}
+		</td>
+    </tr>
+}
+
+</table>
+<div class="btns">
+	<p class="btn btn-primary btn-sm">
+		@Html.ActionLink("Create New", "Create")
+	</p>
+	<p class="btn btn-secondary btn-sm to-cities">@Html.ActionLink("Cities", "Index", "City")</p>
+
+</div>

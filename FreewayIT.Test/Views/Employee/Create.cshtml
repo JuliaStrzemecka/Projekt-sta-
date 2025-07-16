@@ -1,0 +1,28 @@
+﻿@model FreewayIT.Test.ViewModels.Employees.CreateEditEmployeeViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/" />
+<h2>Create employee</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<fieldset>
+    @Html.Partial("EmployeeForm")
+
+    <p>
+        <input type="submit" value="Create" class="btn btn-primary submit-btn"/>
+    </p>
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

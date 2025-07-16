@@ -1,0 +1,51 @@
+﻿@{
+	ViewBag.Title = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<dl class="row defs">
+	<dt class="col-sm-3 text-start">
+		ID
+	</dt>
+	<dd class="col-sm-9 definition">
+		@Model.ID
+	</dd>
+	<dt class="col-sm-3 text-start">
+		Name
+	</dt>
+	<dd class="col-sm-9 definition">
+		@Model.Name
+	</dd>
+	<dt class="col-sm-3 text-start">
+		Employees:
+	</dt>
+	<dd class="col-sm-9">
+		@if (Model.Employees != null)
+		{
+			<table class="table table-sm table-striped">
+				<tr>
+					<th class="col-2">
+						ID
+					</th>
+
+					<th class="col-9 text-start">
+						Name
+					</th>
+				</tr>
+				@foreach (var emp in Model.Employees)
+				{
+					<tr>
+						<td>@emp.ID</td>
+						<td class="text-start">@emp.FirstName  @emp.LastName</td>
+					</tr>
+				}
+			</table>
+		}
+		else
+		{
+			<p>None</p>
+		}
+	</dd>
+
+</dl>

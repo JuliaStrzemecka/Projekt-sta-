@@ -1,0 +1,27 @@
+﻿@*@model FreewayIT.Test.DAL.City*@
+@model FreewayIT.Test.ViewModels.City.CreateEditCityViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit city</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+<fieldset>
+
+	@Html.Partial("CityForm")
+
+	<p>
+		<input class="save-btn btn btn-outline-primary" type="submit" value="Save" />
+	</p>
+
+	
+</fieldset>
+}<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
